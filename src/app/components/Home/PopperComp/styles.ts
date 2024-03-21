@@ -6,6 +6,7 @@ export const useStyles = {
     alignItems: 'center',
   },
   customPopper: {
+    width: 'auto',
     borderRadius: '2rem',
     border: 1,
     p: 1,
@@ -18,7 +19,7 @@ export const useStyles = {
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: '2rem',
-    borderBottom: 1,
+    borderBottom:'1px solid #003366',
   },
   accordionBox: {
     width: 'auto',
@@ -26,6 +27,6 @@ export const useStyles = {
     justifyContent: 'center',
     alignItems: 'center',
     paddingBottom: '2rem',
-    borderBottom: 1,
+    borderBottom:'1px solid #003366',
   }
 };

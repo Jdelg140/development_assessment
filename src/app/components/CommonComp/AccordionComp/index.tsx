@@ -13,8 +13,9 @@ export const AccordionComp = () => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
+          style={{ height: 'auto', padding: '0.3' }}
         >
-          <h6> Select Import Name:</h6>
+          <h5 style={{ color: '#003366' }}> Select Import Name:</h5>
         </AccordionSummary>
         <AccordionDetails>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.

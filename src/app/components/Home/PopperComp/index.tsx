@@ -1,10 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Popper from '@mui/material/Popper';
-import { Button } from '@mui/material';
-import { AccordionComp } from '../AccordionComp';
+import { Button, Popper, Box } from '@mui/material';
+import { AccordionComp } from '../../CommonComp/AccordionComp';
 import { InputsComp } from '../InputsComp';
 import { useStyles } from './styles';
+import { UploadComp } from '../UploadComp';
 
 export const PopperComp = () => {
   const { root, customPopper, titleBox, accordionBox } = useStyles;
@@ -25,10 +24,13 @@ export const PopperComp = () => {
       <Popper id={id} open={open} anchorEl={anchorEl}>
         <Box sx={customPopper}>
           <Box sx={titleBox}>
-            <h3>Document Upload</h3>
+            <h3 style={{ color: '#003366' }}>Document Upload</h3>
           </Box>
-          <Box sx= {accordionBox}>
+          <Box sx={accordionBox}>
             <AccordionComp />
+          </Box>
+          <Box>
+            <UploadComp />
           </Box>
           <InputsComp />
         </Box>
