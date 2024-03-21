@@ -6,7 +6,8 @@ export const useStyles = {
     alignItems: 'center',
   },
   customPopper: {
-    width: 'auto',
+    width: '100%',
+    height: '100%',
     borderRadius: '2rem',
     border: 1,
     p: 1,
@@ -22,11 +23,18 @@ export const useStyles = {
     borderBottom:'1px solid #003366',
   },
   accordionBox: {
-    width: 'auto',
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     paddingBottom: '2rem',
     borderBottom:'1px solid #003366',
+  },
+  testCenterBox: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 };

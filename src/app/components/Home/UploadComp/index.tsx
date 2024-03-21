@@ -9,7 +9,9 @@ export const UploadComp = () => {
         <h4 style={{ color: '#003366' }}>Select a manifest that you'd like to import</h4>
       </Box>
       <Box sx={borderBox}>
-        <Box sx={dropBox}></Box>
+        <Box sx={dropBox}>
+          <h5 style={{ color: '#003366' }}>Drag and Drop here or Browse</h5>
+        </Box>
         <Box>
           <Button style={{ color: '#FFF', background: '#003366' }}>Upload Manifest</Button>
         </Box>

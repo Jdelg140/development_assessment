@@ -4,9 +4,11 @@ import { AccordionComp } from '../../CommonComp/AccordionComp';
 import { InputsComp } from '../InputsComp';
 import { useStyles } from './styles';
 import { UploadComp } from '../UploadComp';
+import { English } from '@/app/locals/en';
+import { TestingCenterComp } from '../TestingCenterComp';
 
 export const PopperComp = () => {
-  const { root, customPopper, titleBox, accordionBox } = useStyles;
+  const { root, customPopper, titleBox, accordionBox, testCenterBox } = useStyles;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -27,12 +29,20 @@ export const PopperComp = () => {
             <h3 style={{ color: '#003366' }}>Document Upload</h3>
           </Box>
           <Box sx={accordionBox}>
-            <AccordionComp />
+            <AccordionComp
+              title={English.AccordionTitleImport}
+              detailsItem={English.AccordionDetailsImport1}
+              detailsItem2={English.AccordionDetailsImport2}
+              detailsItem3={English.AccordionDetailsImport3}
+            />
           </Box>
           <Box>
             <UploadComp />
           </Box>
           <InputsComp />
+          <Box sx={testCenterBox}>
+            <TestingCenterComp />
+          </Box>
         </Box>
       </Popper>
     </Box>
