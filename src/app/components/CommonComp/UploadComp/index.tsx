@@ -1,16 +1,14 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Popper from '@mui/material/Popper';
-import { Button } from '@mui/material';
-import { AccordionComp } from '../AccordionComp';
+import { Box, Button } from '@mui/material';
 
-export const UploadComp = () =>{
-
+export const UploadComp = () => {
   return (
     <Box>
-       <Box>
+      <Box>
         <h4>Select a manifest that you'd like to import</h4>
-       </Box>
+      </Box>
+      <Box>
+        <Button>Upload Manifest</Button>
+      </Box>
     </Box>
   );
-}
+};
