@@ -1,8 +1,8 @@
 export const useStyles = {
   root: {
-    width: '100%',
+    width: '10rem',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'column',
+    gap: '1rem',
   },
 };

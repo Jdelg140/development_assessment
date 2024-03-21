@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box } from '@mui/material';
 import { AccordionProps } from '@/app/types/accordionComp';
 
-export const AccordionComp = ({ title, detailsItem }: AccordionProps) => {
+export const AccordionComp = ({ title, detailsItem, detailsItem2, detailsItem3 }: AccordionProps) => {
   return (
     <Box>
       <Accordion>
@@ -14,11 +14,13 @@ export const AccordionComp = ({ title, detailsItem }: AccordionProps) => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
-          style={{ padding: '0.3'}}
+          style={{ padding: '0.3' }}
         >
           <h5 style={{ color: '#003366' }}> {title}</h5>
         </AccordionSummary>
         <AccordionDetails>{detailsItem}</AccordionDetails>
+        <AccordionDetails>{detailsItem2}</AccordionDetails>
+        <AccordionDetails>{detailsItem3}</AccordionDetails>
       </Accordion>
     </Box>
   );
