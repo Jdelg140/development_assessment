@@ -7,7 +7,7 @@ import { useStyles } from "./styles";
 export const Home = () => {
   const { root } = useStyles;
   return (
-    <Box>
+    <Box sx={root}>
      <PopperComp />
     </Box>
   );

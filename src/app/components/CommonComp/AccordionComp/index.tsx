@@ -14,7 +14,7 @@ export const AccordionComp = () => {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <h4> Select Import Name:</h4>
+          <h6> Select Import Name:</h6>
         </AccordionSummary>
         <AccordionDetails>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
