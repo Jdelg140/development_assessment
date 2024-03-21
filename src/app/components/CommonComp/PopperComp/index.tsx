@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 import { Button } from '@mui/material';
+import { AccordionComp } from '../AccordionComp';
 
 export const PopperComp = () =>{
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -15,12 +16,13 @@ export const PopperComp = () =>{
 
   return (
     <Box>
-      <Button aria-describedby={id} type="button" onClick={handleClick}>
-        Toggle Popper
+      <Button aria-describedby={id} variant="contained" type="button" onClick={handleClick}>
+        <h4>Upload Document</h4>
+        
       </Button>
       <Popper id={id} open={open} anchorEl={anchorEl}>
         <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
-          The content of the Popper.
+          <AccordionComp />
         </Box>
       </Popper>
     </Box>
