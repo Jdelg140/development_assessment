@@ -9,4 +9,9 @@ export const English = {
   AccordionDetailsClientSelect2: 'Client 2',
   AccordionDetailsClientSelect3: 'Client 3',
 
+  ToggleScheduleOptionA: 'Yes',
+  ToggleScheduleOptionB: 'No',
+  ToggleClientOptionA: 'Single',
+  ToggleClientOptionB: 'Multiple',
+
 }

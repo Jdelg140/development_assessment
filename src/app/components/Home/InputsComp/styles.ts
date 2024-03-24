@@ -3,7 +3,6 @@ export const useStyles = {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    margin: '0',
     borderBottom:'1px solid #003366',
   },
   toleranceContainer: {
@@ -11,6 +10,7 @@ export const useStyles = {
     flexDirection: 'column',
     display: 'flex',
     gap: '0.3rem',
+
     borderBottom:'1px solid #003366',
   },
   scheduleContainer: {

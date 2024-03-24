@@ -1,31 +1,36 @@
 import * as React from 'react';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
-import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import Box from '@mui/joy/Box';
+import Radio from '@mui/joy/Radio';
+import { useStyles } from './styles';
+import { ToggleProps } from '@/app/types/toggleComp';
 
-export const ToggleComp = () =>{
-  const [click, onClick] = React.useState<string | null>('left');
+export const ToggleComp = ({ optionA, optionB}: ToggleProps) => {
+  const [selectedValue, setSelectedValue] = React.useState('a');
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>, click: string | null) => {
-    onClick(click);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
   };
 
+  const { radioButtons } = useStyles;
+
   return (
-    <ToggleButtonGroup
-      value={click}
-      exclusive
-      onChange={handleClick}
-      aria-label="text alignment"
-    >
-      <ToggleButton value="left" aria-label="Yes">
-        <FormatAlignLeftIcon />
-      </ToggleButton>
-      <ToggleButton value="center" aria-label="No">
-        <FormatAlignCenterIcon />
-      </ToggleButton>
-    </ToggleButtonGroup>
+    <Box sx={{ display: 'flex', gap: 2 }}>
+      <Radio
+        checked={selectedValue === 'a'}
+        onChange={handleChange}
+        value="a"
+        label={optionA}
+        color="neutral"
+        slotProps={{ input: { 'aria-label': 'A' } }}
+      />
+      <Radio
+        checked={selectedValue === 'b'}
+        onChange={handleChange}
+        value="b"
+        label={optionB}
+        color="neutral"
+        slotProps={{ input: { 'aria-label': 'B' } }}
+      />
+    </Box>
   );
-}
+};

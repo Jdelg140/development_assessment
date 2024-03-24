@@ -14,7 +14,6 @@ export const AccordionComp = ({ title, detailsItem, detailsItem2, detailsItem3 }
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
-          style={{ padding: '0.3' }}
         >
           <h5 style={{ color: '#003366' }}> {title}</h5>
         </AccordionSummary>

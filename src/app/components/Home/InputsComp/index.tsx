@@ -2,6 +2,7 @@ import { FormControlLabel, Switch, Box } from '@mui/material';
 import { useStyles } from './styles';
 import { ToggleComp } from '../../CommonComp/ToggleComp';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { English } from '@/app/locals/en';
 
 export const InputsComp = () => {
   const { dataCheckingContainer, toleranceContainer, scheduleContainer, locationContainer, toleranceContent } =
@@ -27,7 +28,10 @@ export const InputsComp = () => {
           <p style={{ color: '#003366', marginBottom: '0' }}>
             Split schedule using social distancing?
           </p>
-          <ToggleComp />
+          <ToggleComp
+            optionA={English.ToggleScheduleOptionA}
+            optionB={English.ToggleScheduleOptionB}
+          />
         </Box>
         <Box sx={locationContainer}>
           <p style={{ color: '#003366', marginBottom: '0' }}>Location Checking:</p>
@@ -35,7 +39,10 @@ export const InputsComp = () => {
         </Box>
         <Box>
           <p style={{ color: '#003366', marginBottom: '0' }}>Client:</p>
-          <ToggleComp />
+          <ToggleComp
+            optionA={English.ToggleClientOptionA}
+            optionB={English.ToggleClientOptionB}
+          />
         </Box>
       </Box>
     </Box>
