@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/joy/Box';
 import Radio from '@mui/joy/Radio';
-import { useStyles } from './styles';
 import { ToggleProps } from '@/app/types/toggleComp';
 
 export const ToggleComp = ({ optionA, optionB}: ToggleProps) => {
@@ -10,8 +9,6 @@ export const ToggleComp = ({ optionA, optionB}: ToggleProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
   };
-
-  const { radioButtons } = useStyles;
 
   return (
     <Box sx={{ display: 'flex', gap: 2 }}>

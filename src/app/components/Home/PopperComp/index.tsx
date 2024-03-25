@@ -8,7 +8,7 @@ import { English } from '@/app/locals/en';
 import { TestingCenterComp } from '../TestingCenterComp';
 
 export const PopperComp = () => {
-  const { root, customPopper, titleBox, accordionBox, testCenterBox } = useStyles;
+  const { root, customPopper, titleBox, buttonBox } = useStyles;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -28,7 +28,7 @@ export const PopperComp = () => {
           <Box sx={titleBox}>
             <h3 style={{ color: '#003366' }}>Document Upload</h3>
           </Box>
-          <Box sx={accordionBox}>
+          <Box>
             <AccordionComp
               title={English.AccordionTitleImport}
               detailsItem={English.AccordionDetailsImport1}
@@ -39,9 +39,24 @@ export const PopperComp = () => {
           <Box>
             <UploadComp />
           </Box>
-          <InputsComp />
-          <Box sx={testCenterBox}>
+          <Box>
+            <InputsComp />
+          </Box>
+          <Box>
             <TestingCenterComp />
+          </Box>
+          <Box>
+            <h4 style={{ color: '#003366' }}>
+              Data in the import file is correct. Please press continue to import.
+            </h4>
+            <Box sx={buttonBox}>
+              <Button variant="contained" type="button">
+                Continue Import
+              </Button>
+              <Button variant="contained" type="button">
+                Cancel
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Popper>

@@ -10,11 +10,13 @@ export const TestingCenterComp = () => {
   const { root } = useStyles;
   return (
     <Box sx={root}>
+
       {ACCORDION_CLIENT.map(
-        ({ title, detailsItem, detailsItem2, detailsItem3 }: AccordionProps, index) => (
+        ({ title, subtitle, detailsItem, detailsItem2, detailsItem3 }: AccordionProps, index) => (
           <AccordionComp
             key={index}
             title={title}
+            subtitle={subtitle}
             detailsItem={detailsItem}
             detailsItem2={detailsItem2}
             detailsItem3={detailsItem3}

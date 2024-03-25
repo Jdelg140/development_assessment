@@ -24,6 +24,6 @@ export const useStyles = {
     width: '80%',
     border:'0.1rem dashed #003366',
     borderRadius: '1rem',
-    paddingBottom: '1rem'
+    marginBottom: '1rem',
   },
 };
